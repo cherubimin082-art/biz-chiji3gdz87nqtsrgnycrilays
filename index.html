@@ -48,7 +48,7 @@ nav::-webkit-scrollbar{display:none}
 .nav-brand-name{color:#B8934A;font-weight:800;font-size:clamp(.95rem,3vw,1.2rem);letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .nav-brand-sub{color:#fff;font-weight:700;font-size:clamp(.62rem,1.9vw,.76rem);letter-spacing:.09em;white-space:nowrap}
 .nav-actions{display:flex;align-items:center;gap:12px;flex-shrink:0}
-.nav-enquiry{background:#B8934A;border:1.5px solid #B8934A;color:#14263F;padding:9px 18px;border-radius:8px;text-decoration:none;font-size:.82rem;font-weight:700;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;flex-shrink:0;transition:opacity .2s}
+.nav-enquiry{background:#7A1F3D;border:1.5px solid #7A1F3D;color:#fff;padding:9px 18px;border-radius:8px;text-decoration:none;font-size:.82rem;font-weight:700;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;flex-shrink:0;transition:opacity .2s}
 .nav-enquiry:hover{opacity:.88}
 .nav-cta{background:#25d366;color:#fff;padding:11px 18px;border-radius:8px;text-decoration:none;font-size:.82rem;font-weight:700;white-space:nowrap;transition:opacity .2s}
 .nav-cta:hover{opacity:.88}
@@ -85,10 +85,7 @@ section{padding:72px 5vw}
 .sec-center{text-align:center;margin-bottom:48px}
 .sec-sub{color:#64748b;font-size:.94rem;max-width:500px;margin:0 auto}
 /* ENQUIRY */
-.enquiry-bg{background:transparent;position:relative;overflow:hidden}
-.enquiry-mandala{position:absolute;width:200px;height:200px;opacity:.16;pointer-events:none}
-.enquiry-mandala.tl{top:-30px;left:-30px}
-.enquiry-mandala.tr{top:-30px;right:-30px;transform:scaleX(-1)}
+.enquiry-bg{background:#F8F5EF;position:relative;overflow:hidden}
 .enquiry-card{display:grid;grid-template-columns:1fr;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(23,43,77,.1);background:#fff;max-width:640px;margin:0 auto;position:relative;z-index:1}
 .enquiry-top-brand{text-align:center;margin-bottom:6px}
 .enquiry-brand{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,5vw,2.3rem);font-weight:800;color:#7A1F3D;letter-spacing:.01em;line-height:1.15}
@@ -122,7 +119,6 @@ section{padding:72px 5vw}
 .ef-consent input{margin-top:3px;accent-color:#7A1F3D;width:15px;height:15px}
 .ef-submit{position:relative;width:100%;background:#7A1F3D;color:#fff;border:none;padding:15px;border-radius:10px;font-weight:800;font-size:.95rem;letter-spacing:.03em;text-transform:uppercase;cursor:pointer;transition:transform .15s,box-shadow .15s;display:flex;align-items:center;justify-content:center;gap:8px;overflow:hidden}
 .ef-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(122,31,61,.32)}
-.ef-submit-deco{position:absolute;right:16px;top:50%;transform:translateY(-50%);pointer-events:none}
 .ef-note{display:flex;align-items:flex-start;justify-content:center;gap:10px;margin-top:16px}
 .ef-note-badge{width:30px;height:30px;border-radius:50%;background:#F3E9D4;border:1.5px solid #B8934A;color:#B8934A;display:flex;align-items:center;justify-content:center;font-size:.8rem;flex-shrink:0}
 .ef-note p{color:#263238;font-weight:600;font-size:.76rem;line-height:1.5;text-align:left}
@@ -194,7 +190,6 @@ footer{background:#14263F;color:#c7d0dc;padding:28px 5vw;text-align:center;font-
   .app-tab.is-active{color:#B8934A}
   body{padding-bottom:64px}
   .wa-fab{bottom:88px}
-  .enquiry-mandala{width:130px;height:130px}
 }
 @media(max-width:420px){
   nav{padding:0 4vw}
@@ -289,8 +284,6 @@ footer{background:#14263F;color:#c7d0dc;padding:28px 5vw;text-align:center;font-
 <section><div class="container"><div class="sec-center" data-r><p class="sec-eyebrow" style="font-weight:800">Gallery</p><h2 class="sec-h2">A Look Inside</h2></div><div class="gallery-grid"><img src="./img/photo-0.jpg" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=85&fit=crop&auto=format'"><img src="./img/photo-1.jpg" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&q=85&fit=crop&auto=format'"><img src="./img/photo-2.jpg" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&q=85&fit=crop&auto=format'"><img src="./img/photo-3.jpg" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1600&q=85&fit=crop&auto=format'"><img src="./img/photo-4.jpg" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=85&fit=crop&auto=format'"><img src="./8.png" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" loading="lazy"></div></div></section>
 
 <section class="enquiry-bg" id="enquiry">
-  <svg class="enquiry-mandala tl" viewBox="0 0 200 200" fill="none" stroke="#B8934A" stroke-width="1"><circle cx="100" cy="100" r="90"/><circle cx="100" cy="100" r="68"/><circle cx="100" cy="100" r="46"/><line x1="100" y1="6" x2="100" y2="194"/><line x1="6" y1="100" x2="194" y2="100"/><line x1="32" y1="32" x2="168" y2="168"/><line x1="168" y1="32" x2="32" y2="168"/></svg>
-  <svg class="enquiry-mandala tr" viewBox="0 0 200 200" fill="none" stroke="#B8934A" stroke-width="1"><circle cx="100" cy="100" r="90"/><circle cx="100" cy="100" r="68"/><circle cx="100" cy="100" r="46"/><line x1="100" y1="6" x2="100" y2="194"/><line x1="6" y1="100" x2="194" y2="100"/><line x1="32" y1="32" x2="168" y2="168"/><line x1="168" y1="32" x2="32" y2="168"/></svg>
   <div class="container">
     <div class="enquiry-card" data-r>
       <div class="enquiry-form-side">
@@ -371,7 +364,7 @@ footer{background:#14263F;color:#c7d0dc;padding:28px 5vw;text-align:center;font-
           </div>
           <div class="ef-field"><label>Your Requirement <span class="req">*</span></label><div class="ef-input-wrap ef-input-wrap-ta"><span class="ef-icon ef-icon-top">📝</span><textarea id="ef-message" maxlength="500" placeholder="Tell us briefly about your requirement..." oninput="document.getElementById('ef-count').textContent=this.value.length" required></textarea></div><div class="ef-counter"><span id="ef-count">0</span>/500</div></div>
           <label class="ef-consent"><input type="checkbox" id="ef-consent" checked required> I agree to be contacted regarding Hindi classes.</label>
-          <button type="submit" class="ef-submit">➤ Send Enquiry<svg class="ef-submit-deco" width="34" height="20" viewBox="0 0 34 20" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1"><path d="M2 10 Q10 2 18 6 Q26 10 32 4"/><path d="M6 9 Q9 5 13 6"/><path d="M14 7 Q18 4 22 6"/></svg></button>
+          <button type="submit" class="ef-submit">➤ Send Enquiry</button>
           <div class="ef-note"><span class="ef-note-badge">⭐</span><p>Your information is safe with us.<br>We respect your privacy and will get back to you shortly.</p></div>
         </form>
       </div>
@@ -403,7 +396,7 @@ footer{background:#14263F;color:#c7d0dc;padding:28px 5vw;text-align:center;font-
       <div class="contact-items" data-r>
         <div class="ci-row"><div class="ci-icon">📞</div><div><h4>Phone</h4><a href="tel:+918667879712">086678 79712</a></div></div>
         <div class="ci-row"><div class="ci-icon">📍</div><div><h4>Address</h4><p>opposite RKR Grks School, 5, Udumalpet - Dharapuram Rd, Prem Layout, Min Nagar, Periakottai, Tamil Nadu 642126, India</p></div></div>
-        <div class="ci-row"><div class="ci-icon">🕐</div><div><h4>Hours</h4><p>Monday - Friday : 4:00 PM - 9:00 PM<br>Sat - Sun : Flexible Timings</p></div></div>
+        <div class="ci-row"><div class="ci-icon">🕐</div><div><h4>Hours</h4><p>Monday - Friday : 4:00 PM - 9:00 PM<br>Saturday - Sunday : Flexible Timings</p></div></div>
         <div class="ci-row"><div class="ci-icon">🗺️</div><div><h4>Directions</h4><a href="https://maps.google.com/?cid=3128635812756982270">View on Google Maps</a></div></div>
       </div>
       <div class="cta-card" data-r data-d="2">
