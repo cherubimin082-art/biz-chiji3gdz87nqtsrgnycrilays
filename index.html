@@ -33,7 +33,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Plus Jakarta Sans',sans-serif;color:#263238;background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:#263238;background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-weight:600}
 .wa-fab{position:fixed;bottom:24px;right:24px;z-index:9999;background:#25d366;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,211,102,.5);text-decoration:none;transition:transform .2s,box-shadow .2s}.wa-fab:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(37,211,102,.6)}
 [data-r]{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease;}
 [data-r].r-in{opacity:1;transform:none;}
@@ -47,11 +47,9 @@ nav::-webkit-scrollbar{display:none}
 .nav-brand-text{display:flex;flex-direction:column;line-height:1.25;min-width:0}
 .nav-brand-name{color:#B8934A;font-weight:800;font-size:clamp(.95rem,3vw,1.2rem);letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .nav-brand-sub{color:#fff;font-weight:700;font-size:clamp(.62rem,1.9vw,.76rem);letter-spacing:.09em;white-space:nowrap}
-.nav-links{display:flex;align-items:center;gap:22px;flex-shrink:0;margin-left:24px}
-.nav-links a{color:rgba(255,255,255,.82);text-decoration:none;font-size:.84rem;font-weight:500;transition:color .2s;white-space:nowrap}
-.nav-links a:hover{color:#B8934A}
-.nav-actions{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-left:24px}
-.nav-call{border:1.5px solid rgba(255,255,255,.35);color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:.8rem;font-weight:600;white-space:nowrap}
+.nav-actions{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-icon-btn{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;text-decoration:none;flex-shrink:0;transition:background .2s}
+.nav-icon-btn:hover{background:rgba(255,255,255,.22)}
 .nav-cta{background:#25d366;color:#fff;padding:11px 18px;border-radius:8px;text-decoration:none;font-size:.82rem;font-weight:700;white-space:nowrap;transition:opacity .2s}
 .nav-cta:hover{opacity:.88}
 /* HERO */
@@ -78,7 +76,7 @@ nav::-webkit-scrollbar{display:none}
 .hero-footer-item{display:flex;align-items:center;gap:12px}
 .hero-footer-item span{width:38px;height:38px;border-radius:50%;background:#F3E9D4;color:#7A1F3D;display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0}
 .hero-footer-item strong{display:block;font-size:.83rem;color:#263238;font-weight:700}
-.hero-footer-item small{display:block;font-size:.72rem;color:#8b95a0;margin-top:1px;font-weight:400}
+.hero-footer-item small{display:block;font-size:.72rem;color:#8b95a0;margin-top:1px;font-weight:600}
 /* SECTIONS */
 section{padding:72px 5vw}
 .container{max-width:980px;margin:0 auto}
@@ -87,12 +85,17 @@ section{padding:72px 5vw}
 .sec-center{text-align:center;margin-bottom:48px}
 .sec-sub{color:#64748b;font-size:.94rem;max-width:500px;margin:0 auto}
 /* ENQUIRY */
-.enquiry-bg{background:#F8F5EF}
-.enquiry-card{display:grid;grid-template-columns:1fr;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(23,43,77,.1);background:#fff;max-width:640px;margin:0 auto}
-.enquiry-top-brand{text-align:center;margin-bottom:22px}
-.enquiry-brand{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;color:#7A1F3D;letter-spacing:.01em;line-height:1.15}
-.enquiry-brand-line2{font-size:1.2rem;font-weight:800;color:#263238;letter-spacing:.02em;margin-bottom:6px}
-.enquiry-brand-sub{font-size:.72rem;letter-spacing:.1em;color:#7A1F3D;font-weight:700}
+.enquiry-bg{background:#F8F5EF;position:relative;overflow:hidden}
+.enquiry-mandala{position:absolute;width:200px;height:200px;opacity:.16;pointer-events:none}
+.enquiry-mandala.tl{top:-30px;left:-30px}
+.enquiry-mandala.tr{top:-30px;right:-30px;transform:scaleX(-1)}
+.enquiry-card{display:grid;grid-template-columns:1fr;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(23,43,77,.1);background:#fff;max-width:640px;margin:0 auto;position:relative;z-index:1}
+.enquiry-top-brand{text-align:center;margin-bottom:6px}
+.enquiry-brand{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,5vw,2.3rem);font-weight:800;color:#7A1F3D;letter-spacing:.01em;line-height:1.15}
+.enquiry-brand-line2{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,4vw,1.8rem);font-weight:800;color:#14263F;letter-spacing:.02em;margin-top:2px}
+.enquiry-brand-sub{font-size:.78rem;letter-spacing:.14em;color:#B8934A;font-weight:800;margin-top:10px;text-transform:uppercase}
+.enquiry-divider{display:flex;align-items:center;justify-content:center;gap:10px;margin:16px auto 24px;max-width:200px}
+.enquiry-divider span{height:1px;background:#B8934A;flex:1;opacity:.5}
 .enquiry-form-side{padding:32px 20px}
 @media(min-width:560px){.enquiry-form-side{padding:40px 36px}}
 .enquiry-form-head{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:10px}
@@ -123,7 +126,7 @@ section{padding:72px 5vw}
 @media(min-width:768px){.about-wrap{grid-template-columns:1fr 1fr}}
 .about-img-wrap{border-radius:20px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.1)}
 .about-img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 15%;display:block}
-.about-text p{color:#475569;line-height:1.84;margin-bottom:13px;font-size:.93rem;font-weight:400}
+.about-text p{color:#475569;line-height:1.84;margin-bottom:13px;font-size:.93rem;font-weight:600}
 .hl-list{list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:8px}
 .hl-list li{padding:10px 14px 10px 36px;position:relative;background:#f8fafc;border-radius:8px;color:#334155;font-size:.87rem;border-left:3px solid #B8934A}
 .hl-list li:before{content:'✓';color:#B8934A;position:absolute;left:12px;font-weight:700}
@@ -177,8 +180,6 @@ section{padding:72px 5vw}
 /* FOOTER */
 footer{background:#14263F;color:#c7d0dc;padding:28px 5vw;text-align:center;font-size:.8rem}
 .footer-brand{color:#c7d0dc;font-weight:700;font-size:.88rem;margin-bottom:6px}
-.ig-fab{position:fixed;bottom:92px;right:24px;z-index:9999;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%);width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(214,36,159,.4);text-decoration:none;transition:transform .2s,box-shadow .2s}
-.ig-fab:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(214,36,159,.5)}
 /* APP TAB BAR (mobile, native-app style) */
 .app-tabbar{display:none}
 @media(max-width:899px){
@@ -188,7 +189,6 @@ footer{background:#14263F;color:#c7d0dc;padding:28px 5vw;text-align:center;font-
   .app-tab.is-active{color:#B8934A}
   body{padding-bottom:64px}
   .wa-fab{bottom:88px}
-  .ig-fab{bottom:156px}
 }
 </style>
 </head>
@@ -200,16 +200,8 @@ footer{background:#14263F;color:#c7d0dc;padding:28px 5vw;text-align:center;font-
       <span class="nav-brand-sub">HINDI TUTORIALS</span>
     </div>
   </div>
-  <div class="nav-links">
-    <a href="#top">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#courses">Courses</a>
-    <a href="#enquiry">Live Classes</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Contact Us</a>
-  </div>
   <div class="nav-actions">
-    <a href="tel:+918667879712" class="nav-call">📞 Call Us</a>
+    <a href="#enquiry" class="nav-icon-btn" aria-label="Enquiry">📋</a>
     <a href="https://wa.me/918667879712?text=Hello!%20I%20found%20Rakhi%20Bala's%20Hindi%20Tutorial%20online%20and%20I%20am%20interested%20in%20joining%20Hindi%20classes.%20Could%20you%20please%20share%20details%20about%20the%20available%20batches%2C%20fees%2C%20and%20how%20to%20enrol%3F%20Thank%20you!" class="nav-cta">💬 WhatsApp</a>
   </div>
 </nav>
@@ -217,7 +209,7 @@ footer{background:#14263F;color:#c7d0dc;padding:28px 5vw;text-align:center;font-
 <div class="hero" id="top">
   <div class="hero-grid">
     <div class="hero-text" data-r>
-      <h1>Master <span>Hindi &amp; Spoken English</span> from the Comfort of Your Home!</h1>
+      <h1>Master <span>Spoken Hindi</span> from the Comfort of Your Home!</h1>
       <p class="hero-sub">Join Rakhi Bala's live online Hindi classes and build fluency, confidence, and a lifelong love for the Hindi language.</p>
       <div class="hero-btns">
         <a href="https://wa.me/918667879712?text=Hello!%20I%20found%20Rakhi%20Bala's%20Hindi%20Tutorial%20online%20and%20I%20am%20interested%20in%20joining%20Hindi%20classes.%20Could%20you%20please%20share%20details%20about%20the%20available%20batches%2C%20fees%2C%20and%20how%20to%20enrol%3F%20Thank%20you!" class="btn-p">Book Your Free Demo Class Today</a>
@@ -231,8 +223,9 @@ footer{background:#14263F;color:#c7d0dc;padding:28px 5vw;text-align:center;font-
     </div>
     <div class="hero-photo-wrap" data-r data-d="2">
       <div class="hero-slideshow" id="heroSlides">
-        <img src="./6.png" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" class="hs-active" loading="eager">
-        <img src="./5.png" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" loading="lazy">
+        <img src="./7.jpeg" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" class="hs-active" loading="eager">
+        <img src="./8.jpeg" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" loading="lazy">
+        <img src="./9.jpeg" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" loading="lazy">
       </div>
     </div>
   </div>
@@ -252,7 +245,7 @@ footer{background:#14263F;color:#c7d0dc;padding:28px 5vw;text-align:center;font-
         <img src="./8.png" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" class="about-img" loading="lazy">
       </div>
       <div data-r data-d="2">
-        <p class="sec-eyebrow">About Us</p>
+        <p class="sec-eyebrow" style="font-weight:800">About Us</p>
         <h2 class="sec-h2">RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)</h2>
         <p class="about-text">Rakhi Bala's Hindi Tutorial is a trusted live online learning centre dedicated to teaching Hindi to students of all ages and skill levels. Based in Periakottai, Tamil Nadu, we bridge the language gap for students across India who wish to learn Hindi effectively through engaging, interactive live sessions led by an experienced and passionate tutor. Our highly rated programme — scoring an impressive 4.9 out of 5 — reflects our unwavering commitment to student success and personalised attention.</p><p class="about-text">We offer flexible class timings seven days a week from 9:00 AM to 5:00 PM, making it easy for school students, working professionals, and homemakers to fit Hindi learning into their busy schedules. Whether you are a complete beginner or looking to improve your reading, writing, or spoken Hindi skills, Rakhi Bala's Hindi Tutorial provides a warm, structured, and results-driven learning environment right from your screen.</p>
         <ul class="hl-list"><li>Exceptional 4.9/5 rating from 49 satisfied students and parents</li><li>Live interactive online classes available 7 days a week, 9 AM to 5 PM</li><li>Personalised teaching approach for all age groups and skill levels</li></ul>
@@ -287,19 +280,22 @@ footer{background:#14263F;color:#c7d0dc;padding:28px 5vw;text-align:center;font-
 <section><div class="container"><div class="sec-center" data-r><p class="sec-eyebrow">Gallery</p><h2 class="sec-h2">A Look Inside</h2></div><div class="gallery-grid"><img src="./img/photo-0.jpg" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=85&fit=crop&auto=format'"><img src="./img/photo-1.jpg" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&q=85&fit=crop&auto=format'"><img src="./img/photo-2.jpg" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&q=85&fit=crop&auto=format'"><img src="./img/photo-3.jpg" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1600&q=85&fit=crop&auto=format'"><img src="./img/photo-4.jpg" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=85&fit=crop&auto=format'"><img src="./8.png" alt="RAKHI BALA'S HINDI TUTORIAL (LIVE ONLINE CLASS)" loading="lazy"></div></div></section>
 
 <section class="enquiry-bg" id="enquiry">
+  <svg class="enquiry-mandala tl" viewBox="0 0 200 200" fill="none" stroke="#B8934A" stroke-width="1"><circle cx="100" cy="100" r="90"/><circle cx="100" cy="100" r="68"/><circle cx="100" cy="100" r="46"/><line x1="100" y1="6" x2="100" y2="194"/><line x1="6" y1="100" x2="194" y2="100"/><line x1="32" y1="32" x2="168" y2="168"/><line x1="168" y1="32" x2="32" y2="168"/></svg>
+  <svg class="enquiry-mandala tr" viewBox="0 0 200 200" fill="none" stroke="#B8934A" stroke-width="1"><circle cx="100" cy="100" r="90"/><circle cx="100" cy="100" r="68"/><circle cx="100" cy="100" r="46"/><line x1="100" y1="6" x2="100" y2="194"/><line x1="6" y1="100" x2="194" y2="100"/><line x1="32" y1="32" x2="168" y2="168"/><line x1="168" y1="32" x2="32" y2="168"/></svg>
   <div class="container">
     <div class="enquiry-card" data-r>
       <div class="enquiry-form-side">
         <div class="enquiry-top-brand">
           <h3 class="enquiry-brand">RAKHI BALA'S</h3>
-          <h4 class="enquiry-brand-line2">HINDI TUTORIALS</h4>
+          <h4 class="enquiry-brand-line2">HINDI TUTORIAL</h4>
           <p class="enquiry-brand-sub">— (Live Online Class) —</p>
         </div>
+        <div class="enquiry-divider"><span></span><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 0l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#B8934A"/></svg><span></span></div>
         <div class="enquiry-form-head">
           <span class="enquiry-form-icon">📋</span>
           <h2>Make an Enquiry</h2>
         </div>
-        <p class="enquiry-form-sub">We'd love to understand your requirements and help you with the right Hindi and Spoken English classes.</p>
+        <p class="enquiry-form-sub">We'd love to understand your requirements and help you with the right Hindi classes.</p>
         <form onsubmit="return sendEnquiry(event)">
           <div class="ef-row">
             <div class="ef-field"><label>Student Name <span class="req">*</span></label><div class="ef-input-wrap"><span class="ef-icon">👤</span><input type="text" id="ef-student" placeholder="Enter student name" required></div></div>
@@ -307,7 +303,19 @@ footer{background:#14263F;color:#c7d0dc;padding:28px 5vw;text-align:center;font-
           </div>
           <div class="ef-row">
             <div class="ef-field"><label>Mobile / WhatsApp Number <span class="req">*</span></label><div class="ef-input-wrap"><span class="ef-icon">📞</span><span class="ef-prefix">+91</span><input type="tel" id="ef-phone" placeholder="Enter mobile number" required></div></div>
-            <div class="ef-field"><label>Email Address <span class="req">*</span></label><div class="ef-input-wrap"><span class="ef-icon">✉️</span><input type="email" id="ef-email" placeholder="Enter email address" required></div></div>
+            <div class="ef-field"><label>Class / Grade <span class="req">*</span></label>
+              <div class="ef-input-wrap"><span class="ef-icon">🎓</span>
+                <select id="ef-class" required>
+                  <option value="" disabled selected>Select class / grade</option>
+                  <option>Beginner (No Prior Knowledge)</option>
+                  <option>School Student – Primary</option>
+                  <option>School Student – Middle/High</option>
+                  <option>College Student</option>
+                  <option>Working Professional</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
           </div>
           <div class="ef-row">
             <div class="ef-field"><label>Country <span class="req">*</span></label>
@@ -325,43 +333,14 @@ footer{background:#14263F;color:#c7d0dc;padding:28px 5vw;text-align:center;font-
                 </select>
               </div>
             </div>
-            <div class="ef-field"><label>Class / Grade <span class="req">*</span></label>
-              <div class="ef-input-wrap"><span class="ef-icon">🎓</span>
-                <select id="ef-class" required>
-                  <option value="" disabled selected>Select class / grade</option>
-                  <option>Beginner (No Prior Knowledge)</option>
-                  <option>School Student – Primary</option>
-                  <option>School Student – Middle/High</option>
-                  <option>College Student</option>
-                  <option>Working Professional</option>
-                  <option>Other</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="ef-row">
-            <div class="ef-field"><label>Requirement - Hindi <span class="req">*</span></label>
+            <div class="ef-field"><label>Requirement <span class="req">*</span></label>
               <div class="ef-input-wrap"><span class="ef-icon">📖</span>
-                <select id="ef-requirement-hindi" required>
+                <select id="ef-requirement" required>
                   <option value="" disabled selected>Select requirement</option>
                   <option>School Hindi (Syllabus Support)</option>
                   <option>Exam Preparation</option>
                   <option>Spoken Hindi</option>
                   <option>Reading &amp; Writing (Basics)</option>
-                  <option>Not Required</option>
-                  <option>Other</option>
-                </select>
-              </div>
-            </div>
-            <div class="ef-field"><label>Requirement - Spoken English <span class="req">*</span></label>
-              <div class="ef-input-wrap"><span class="ef-icon">💬</span>
-                <select id="ef-requirement-english" required>
-                  <option value="" disabled selected>Select requirement</option>
-                  <option>Beginner Spoken English</option>
-                  <option>Fluency &amp; Confidence Building</option>
-                  <option>Interview Preparation</option>
-                  <option>Business English</option>
-                  <option>Not Required</option>
                   <option>Other</option>
                 </select>
               </div>
@@ -379,23 +358,10 @@ footer{background:#14263F;color:#c7d0dc;padding:28px 5vw;text-align:center;font-
                 </select>
               </div>
             </div>
-            <div class="ef-field"><label>How did you hear about us? <span class="req">*</span></label>
-              <div class="ef-input-wrap"><span class="ef-icon">📣</span>
-                <select id="ef-source" required>
-                  <option value="" disabled selected>Select an option</option>
-                  <option>Google Search</option>
-                  <option>Instagram</option>
-                  <option>Facebook</option>
-                  <option>WhatsApp</option>
-                  <option>Friend / Referral</option>
-                  <option>Other</option>
-                </select>
-              </div>
-            </div>
           </div>
-          <div class="ef-field"><label>Your Requirement / Message <span class="req">*</span></label><div class="ef-input-wrap ef-input-wrap-ta"><span class="ef-icon ef-icon-top">📝</span><textarea id="ef-message" maxlength="500" placeholder="Tell us briefly about your requirement..." oninput="document.getElementById('ef-count').textContent=this.value.length" required></textarea></div><div class="ef-counter"><span id="ef-count">0</span>/500</div></div>
-          <label class="ef-consent"><input type="checkbox" id="ef-consent" checked required> I agree to be contacted regarding Hindi and Spoken English classes.</label>
-          <button type="submit" class="ef-submit">✈️ Send Enquiry</button>
+          <div class="ef-field"><label>Your Requirement <span class="req">*</span></label><div class="ef-input-wrap ef-input-wrap-ta"><span class="ef-icon ef-icon-top">📝</span><textarea id="ef-message" maxlength="500" placeholder="Tell us briefly about your requirement..." oninput="document.getElementById('ef-count').textContent=this.value.length" required></textarea></div><div class="ef-counter"><span id="ef-count">0</span>/500</div></div>
+          <label class="ef-consent"><input type="checkbox" id="ef-consent" checked required> I agree to be contacted regarding Hindi classes.</label>
+          <button type="submit" class="ef-submit">➤ Send Enquiry</button>
           <p class="ef-note">🛡️ Your information is safe with us.<br>We respect your privacy and will get back to you shortly.</p>
         </form>
       </div>
@@ -427,9 +393,8 @@ footer{background:#14263F;color:#c7d0dc;padding:28px 5vw;text-align:center;font-
       <div class="contact-items" data-r>
         <div class="ci-row"><div class="ci-icon">📞</div><div><h4>Phone</h4><a href="tel:+918667879712">086678 79712</a></div></div>
         <div class="ci-row"><div class="ci-icon">📍</div><div><h4>Address</h4><p>opposite RKR Grks School, 5, Udumalpet - Dharapuram Rd, Prem Layout, Min Nagar, Periakottai, Tamil Nadu 642126, India</p></div></div>
-        <div class="ci-row"><div class="ci-icon">🕐</div><div><h4>Hours</h4><p>Monday–Sunday: 9:00 AM – 5:00 PM</p></div></div>
+        <div class="ci-row"><div class="ci-icon">🕐</div><div><h4>Hours</h4><p>Monday - Sunday : 4:00 PM - 9:00 PM</p></div></div>
         <div class="ci-row"><div class="ci-icon">🗺️</div><div><h4>Directions</h4><a href="https://maps.google.com/?cid=3128635812756982270">View on Google Maps</a></div></div>
-        <div class="ci-row"><div class="ci-icon">📷</div><div><h4>Instagram</h4><a href="javascript:void(0)" id="ig-contact-link">Follow us on Instagram</a></div></div>
       </div>
       <div class="cta-card" data-r data-d="2">
         <h3>Let's Talk</h3>
@@ -452,9 +417,6 @@ footer{background:#14263F;color:#c7d0dc;padding:28px 5vw;text-align:center;font-
   <a href="#enquiry" class="app-tab" data-tab="enquiry"><span class="app-tab-ic">📋</span>Enquiry</a>
   <a href="#contact" class="app-tab" data-tab="contact"><span class="app-tab-ic">📞</span>Contact</a>
 </nav>
-<a href="javascript:void(0)" id="ig-fab-link" class="ig-fab" aria-label="Instagram">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="1.1" fill="white" stroke="none"/></svg>
-</a>
 <a href="https://wa.me/918667879712?text=Hello!%20I%20found%20Rakhi%20Bala's%20Hindi%20Tutorial%20online%20and%20I%20am%20interested%20in%20joining%20Hindi%20classes.%20Could%20you%20please%20share%20details%20about%20the%20available%20batches%2C%20fees%2C%20and%20how%20to%20enrol%3F%20Thank%20you!" class="wa-fab" aria-label="WhatsApp">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
@@ -465,15 +427,12 @@ function sendEnquiry(e){
   var student=document.getElementById('ef-student').value.trim();
   var parent=document.getElementById('ef-parent').value.trim();
   var phone='+91 '+document.getElementById('ef-phone').value.trim();
-  var email=document.getElementById('ef-email').value.trim();
-  var country=document.getElementById('ef-country').value;
   var cls=document.getElementById('ef-class').value;
-  var reqHindi=document.getElementById('ef-requirement-hindi').value;
-  var reqEnglish=document.getElementById('ef-requirement-english').value;
+  var country=document.getElementById('ef-country').value;
+  var requirement=document.getElementById('ef-requirement').value;
   var timing=document.getElementById('ef-timing').value;
-  var source=document.getElementById('ef-source').value;
   var message=document.getElementById('ef-message').value.trim();
-  var lines=['Hello! I would like to enquire about Hindi and Spoken English classes at Rakhi Bala\'s Hindi Tutorial.','','Student Name: '+student,'Parent/Guardian Name: '+parent,'Mobile Number: '+phone,'Email Address: '+email,'Country: '+country,'Class/Grade: '+cls,'Requirement - Hindi: '+reqHindi,'Requirement - Spoken English: '+reqEnglish,'Preferred Timing: '+timing,'How they heard about us: '+source,'Message: '+message];
+  var lines=['Hello! I would like to enquire about Hindi classes at Rakhi Bala\'s Hindi Tutorial.','','Student Name: '+student,'Parent/Guardian Name: '+parent,'Mobile Number: '+phone,'Class/Grade: '+cls,'Country: '+country,'Requirement: '+requirement,'Preferred Timing: '+timing,'Message: '+message];
   window.location.href='https://wa.me/918667879712?text='+encodeURIComponent(lines.join('\n'));
   return false;
 }
